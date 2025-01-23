@@ -151,5 +151,10 @@ app.delete("/api/expensesdeletebyId/:id", async (req, res) => {
 
 
 
+app.delete("/api/expensesdeleteAll", async (req, res) => {
+  const delall = await expenseModel.deleteMany({}); 
+  res.json(delall);
+});
+
 
 
